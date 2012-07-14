@@ -1,13 +1,11 @@
 require 'webrat'
 
-#Webrat.configure do |config|
-#  config.mode = :mechanize
-#end
-
-#World(Webrat::Methods)
 World(Webrat::Matchers)
 
 require 'watir-webdriver'
+require 'headless'
+headless = Headless.new
+headless.start
 browser = Watir::Browser.new :firefox
 
 Before do
@@ -16,4 +14,5 @@ end
 
 at_exit do 
   browser.close
+  headless.destroy
 end
