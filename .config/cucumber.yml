@@ -1,0 +1,4 @@
+---
+default: --profile html_output --profile junit_output
+html_output: --format html --out results.html
+junit_output: --format junit --out ./junit_logs
