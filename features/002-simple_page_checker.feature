@@ -27,6 +27,32 @@ Scenario: Validate Services Page
   And I should see "keystone"
   And I should see "ec2"
 
+Scenario: Validate Flavors Page
+  When I click on "Flavors"
+  Then I should see "m1.xlarge"
+  And I should see "m1.large"
+  And I should see "m1.medium"
+  And I should see "m1.small"
+  And I should see "m1.tiny"
+
+Scenario: Validate Images Page
+  When I click on "Images"
+  Then I should see "tty-image"
+  And I should see "cirros-image"
+
+Scenario: Validate Images Page
+  When I click on "Projects"
+  Then I should see "admin"
+  And I should see "service"
+  And I should see "demo"
+
+Scenario: Validate Users Page
+  When I click on "Users"
+  Then I should see "admin"
+  And I should see "demo"
+  And I should see "nova"
+  And I should see "glance"
+
 Scenario: Logout
   Given I click on "Sign Out"
   Then I should see "Log In"
