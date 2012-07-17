@@ -3,7 +3,7 @@ Feature: Login to Horizon with an invalid user
   I want to check if I can login
 
   Scenario: Login with an invalid user
-    Given I have opened "http://184.106.250.138"
+    Given I have opened "http://184.106.144.18"
     When I fill in "username" with "admin"
     And I fill in "password" with "password"
     And I press "Sign In"
