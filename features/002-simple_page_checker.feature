@@ -2,7 +2,7 @@ Feature: Check all pages look right
   I want to do a simple check on all pages
 
 Scenario: Login with a valid user
-  Given I have opened "http://184.106.144.18"
+  Given I have opened horizon
   When I fill in "username" with "admin"
     And I fill in "password" with "secrete"
     And I press "Sign In"
